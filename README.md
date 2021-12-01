@@ -18,6 +18,7 @@ Collect stars by helping Santa solve puzzles. Two puzzles will be made available
 
 ## Progress
 
-| Day                                               | Part 1 | Part 2 |
-| :------------------------------------------------ | :----: | :----: |
-| [Day 1: Not Quite Lisp](src/01/summary.md#readme) |   ⭐   |   🌟   |
+| Day                                                           | Part 1 | Part 2 |
+| :------------------------------------------------------------ | :----: | :----: |
+| [Day 1: Not Quite Lisp](src/01/summary.md#readme)             |   ⭐   |   🌟   |
+| [I Was Told There Would Be No Math](src/02/summary.md#readme) |   ⭐   |   🌟   |
