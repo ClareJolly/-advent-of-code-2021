@@ -3,12 +3,12 @@ const part1 = (inputData: string[]) => {
 
   const areas = gifts.map(([l, w, h]) => {
     const sides = [l * h, l * w, h * w]
-    const low = sides.sort((a, b) => a - b)[0]
+    const shortest = sides.sort((a, b) => a - b)[0]
 
     return (
       sides.reduce((acc, side) => {
         return acc + 2 * side
-      }, 0) + low
+      }, 0) + shortest
     )
   })
   return areas.reduce((acc, item) => {
