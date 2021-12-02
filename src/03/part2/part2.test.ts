@@ -1,15 +1,14 @@
 import part2 from '.'
-// import { getDataForTest } from '../../../test/unit/utils'
-
-// const { testData, realData } = getDataForTest(__dirname)
 
 describe('part2', () => {
-  it('returns the expected answer with test data', () => {
-    //   const result = part2(testData)
-    //   expect(result).toStrictEqual()
-  })
-  it('returns the expected answer with real data', () => {
-    //   const result = part2(realData)
-    //   expect(result).toStrictEqual()
+  const cases: [string, number][] = [
+    ['^v', 3],
+    ['^>v<', 3],
+    ['^v^v^v^v^v', 11],
+  ]
+
+  test.each(cases)('given %p as arguments, returns %p', (firstArg, expectedResult) => {
+    const result = part2(firstArg)
+    expect(result).toEqual(expectedResult)
   })
 })
