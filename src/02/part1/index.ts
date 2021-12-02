@@ -5,15 +5,9 @@ const part1 = (inputData: string[]) => {
     const sides = [l * h, l * w, h * w]
     const shortest = sides.sort((a, b) => a - b)[0]
 
-    return (
-      sides.reduce((acc, side) => {
-        return acc + 2 * side
-      }, 0) + shortest
-    )
+    return sides.reduce((acc, side) => acc + 2 * side, 0) + shortest
   })
-  return areas.reduce((acc, item) => {
-    return acc + item
-  }, 0)
+  return areas.reduce((acc, item) => acc + item, 0)
 }
 
 export default part1
