@@ -18,7 +18,8 @@ Collect stars by helping Santa solve puzzles. Two puzzles will be made available
 
 ## Progress
 
-| Day                                                           | Part 1 | Part 2 |
-| :------------------------------------------------------------ | :----: | :----: |
-| [Day 1: Not Quite Lisp](src/01/summary.md#readme)             |   ⭐   |   🌟   |
-| [I Was Told There Would Be No Math](src/02/summary.md#readme) |   ⭐   |   🌟   |
+| Day                                                                       | Part 1 | Part 2 |
+| :------------------------------------------------------------------------ | :----: | :----: |
+| [Day 1: Not Quite Lisp](src/01/summary.md#readme)                         |   ⭐   |   🌟   |
+| [Day 2: I Was Told There Would Be No Math](src/02/summary.md#readme)      |   ⭐   |   🌟   |
+| [Day 3: Perfectly Spherical Houses in a Vacuum](src/03/summary.md#readme) |   ⭐   |        |
