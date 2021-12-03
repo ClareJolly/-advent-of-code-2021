@@ -24,3 +24,4 @@ Collect stars by helping Santa solve puzzles. Two puzzles will be made available
 | [Day 2: I Was Told There Would Be No Math](src/02/summary.md#readme)      |   ⭐   |   🌟   |
 | [Day 3: Perfectly Spherical Houses in a Vacuum](src/03/summary.md#readme) |   ⭐   |   🌟   |
 | [Day 4: The Ideal Stocking Stuffer](src/04/summary.md#readme)             |   ⭐   |   🌟   |
+| [Day 5: Doesn't He Have Intern-Elves For This?](src/05/summary.md#readme) |   ⭐   |   🌟   |
