@@ -9,14 +9,6 @@ export const OPERATIONS: { [key: string]: (a: number, b: number) => number } = {
   NOT: (a: number, b: number): number => ~a,
 }
 
-const BITWISE_METHODS: { [key: string]: (a: number, b: number) => number } = {
-  AND: (a, b) => a & b,
-  OR: (a, b) => a | b,
-  NOT: a => ~a,
-  LSHIFT: (a, b) => a << b,
-  RSHIFT: (a, b) => a >> b,
-}
-
 export const parseInstruction = (instruction: string) => {
   const command = instruction.match(COMMAND_REGEX)
   const args = instruction.match(ARGUMENTS_REGEX)
