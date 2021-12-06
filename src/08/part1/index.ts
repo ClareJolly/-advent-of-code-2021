@@ -1,17 +1,23 @@
 interface Information {
   string: string
   total: number
-  characters?: number
+  characters: number
 }
 
 const part1 = (inputData: string[]) => {
   const data = inputData.reduce((acc, item) => {
-    const chars = item.replace(/\\x../g, '')
-    console.log('🚀 ~ file: index.ts ~ line 10 ~ data ~ chars', chars)
-    acc.push({ string: item, total: item.length })
+    const chars = item
+      .replace(/\\\\/g, '*')
+      .replace(/\\x../g, '*')
+      .replace(/\\"/g, '*')
+      .replace(/"/g, '')
+    acc.push({ string: item, total: item.length, characters: chars.length })
     return acc
   }, [] as Information[])
-  console.log('🚀 ~ file: index.ts ~ line 12 ~ data ~ data', data)
+
+  return data.reduce((acc, item) => {
+    return acc + item.total - item.characters
+  }, 0)
 }
 
 export default part1
