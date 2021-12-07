@@ -18,6 +18,8 @@
     "rootDir": "./src"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash.permutations": "^1.0.0",
     "md5": "^2.3.0"
   },
   "devDependencies": {
