@@ -28,3 +28,4 @@ Collect stars by helping Santa solve puzzles. Two puzzles will be made available
 | [Day 6: Probably a Fire Hazard](src/06/summary.md#readme)                 |   ⭐   |   🌟   |
 | [Day 7: Some Assembly Required](src/07/summary.md#readme)                 |   ⭐   |   🌟   |
 | [Day 8: Matchsticks](src/08/summary.md#readme)                            |   ⭐   |   🌟   |
+| [Day 9: All in a Single Night](src/09/summary.md#readme)                  |        |        |

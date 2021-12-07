@@ -1,10 +1,13 @@
 {
   "name": "advent-of-code-2021",
   "version": "1.0.0",
-  "repository": "git@github.com:ClareJolly/advent-of-code-2021.git",
+  "repository": "git@github.com:ClareJolly/advent-of-code-2015.git",
   "author": "Clare Jolly <clarejollyuk@gmail.com>",
   "license": "MIT",
   "scope": "@ClareJolly",
+  "bin": {
+    "aoc-setup-notes": "./admin/index.js"
+  },
   "scripts": {
     "test": "jest --config ./jest.config.js",
     "day": "node ./src",
@@ -45,6 +48,10 @@
     "prettier": "^2.2.1",
     "ts-jest": "^27.0.7",
     "typescript": "^4.5.2",
-    "yargs": "^16.2.0"
+    "yargs": "^16.2.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.1"
   }
 }
