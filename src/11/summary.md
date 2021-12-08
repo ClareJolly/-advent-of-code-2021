@@ -32,7 +32,7 @@ Given Santa's current password ([your puzzle input](data/input.txt)), what shoul
 
 ## Part 2
 
-<--TEXT-->
+Santa's password expired again. What's the next one?
 
 [Solution Part 2](./part2/index.ts)
 

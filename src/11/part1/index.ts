@@ -1,60 +1,64 @@
-var longestConsecutive = (nums: number[]) => {
-  var map: { [key: number]: { start: number; end: number } } = {}
-  var max = 0
-  var start = 0
-  var end = 0
-  var num = 0
-  var len = nums.length
-  for (var i = 0; i < len; i++) {
-    num = nums[i]
-    if (map[num]) continue
-    start = map[num - 1] ? map[num - 1].start : num
-    end = map[num + 1] ? map[num + 1].end : num
-    map[num] = { start: num, end: num }
-    map[start].end = end
-    map[end].start = start
-    max = Math.max(end - start + 1, max)
-  }
-  return max
-}
-
-const testPairs = (pass: number[]) => {
-  var count = 0
-  for (var i = 0; i < 7; i++) {
-    if (pass[i] / pass[i + 1] === 1) {
-      count++
-      i++
+const incrementPassword = (password: string) => {
+  let strSplit = password.split('')
+  strSplit[strSplit.length - 1] = String.fromCharCode(
+    strSplit[strSplit.length - 1].charCodeAt(0) + 1,
+  )
+  for (let i = strSplit.length - 1; i > 0; i--) {
+    if (strSplit[i].charCodeAt(0) == 123) {
+      strSplit[i] = 'a'
+      strSplit[i - 1] = String.fromCharCode(strSplit[i - 1].charCodeAt(0) + 1)
     }
   }
-  if (count >= 2) return true
+  return strSplit.join('')
+}
+
+const checkConsecutive = (password: string) => {
+  let charCodeArray = password.split('').map(function (x) {
+    return x.charCodeAt(0)
+  })
+  for (let i = charCodeArray.length; i >= 2; i--) {
+    if (
+      charCodeArray[i] - charCodeArray[i - 1] == 1 &&
+      charCodeArray[i - 1] - charCodeArray[i - 2] == 1
+    ) {
+      return true
+    }
+  }
   return false
 }
 
+const checkForChars = (password: string) => {
+  if (!password.split('').some(d => d === 'i' || d === 'o' || d === 'l')) {
+    return true
+  }
+  return false
+}
+
+const checkPairs = (password: string) => {
+  let pairs = password.match(/(\w)\1+/g)
+  if (pairs != null && pairs.length >= 2) {
+    return true
+  }
+  return false
+}
+
+const checks = [
+  (password: string) => checkPairs(password),
+  (password: string) => checkForChars(password),
+  (password: string) => checkConsecutive(password),
+]
+
 const part1 = (inputData: string) => {
-  const testData = 'abcdffaa'
-  //   const data = inputData.split('')
-  const data = testData.split('')
-  const nums = data.map(d => d.charCodeAt(0))
-  console.log('🚀 ~ file: index.ts ~ line 4 ~ part1 ~ nums', nums)
-  // let ascii = 'a'.charCodeAt(0)
-  // var chr = String.fromCharCode(97 + n); // where n is 0, 1, 2 ...
+  let password = inputData
 
-  const a = longestConsecutive(nums)
-  console.log('🚀 ~ file: index.ts ~ line 18 ~ part1 ~ a', a)
-
-  const checks = [
-    (pw: string[]) => !pw.some(d => d === 'i' || d === 'o' || d === 'i'),
-    (pw: string[]) => {
-      const nums = pw.map(d => d.charCodeAt(0))
-      return longestConsecutive(nums) > 2
-    },
-    (pw: string[]) => testPairs(pw.map(d => d.charCodeAt(0))),
-  ]
-
-  const valid = checks.every(c => {
-    return c(data)
-  })
-  console.log('🚀 ~ file: index.ts ~ line 54 ~ part1 ~ valid', valid)
+  let valid = false
+  while (!valid) {
+    password = incrementPassword(password)
+    valid = checks.every(c => {
+      return c(password)
+    })
+  }
+  return password
 }
 
 export default part1
