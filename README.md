@@ -30,4 +30,4 @@ Collect stars by helping Santa solve puzzles. Two puzzles will be made available
 | [Day 8: Matchsticks](src/08/summary.md#readme)                            |   ⭐   |   🌟   |
 | [Day 9: All in a Single Night](src/09/summary.md#readme)                  |   ⭐   |   🌟   |
 | [Day 10: Elves Look, Elves Say](src/10/summary.md#readme)                 |   ⭐   |   🌟   |
-| [Day 11: Corporate Policy](src/11/summary.md#readme)                      |        |        |
+| [Day 11: Corporate Policy](src/11/summary.md#readme)                      |   ⭐   |   🌟   |
