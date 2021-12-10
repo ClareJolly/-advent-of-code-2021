@@ -1,12 +1,12 @@
+import fs from 'fs'
+import path from 'path'
 import part1 from '.'
-import { getDataForTest } from '../../../test/unit/utils'
 
-const { testData, realData } = getDataForTest(__dirname)
-
+const realData = fs.readFileSync(path.join(__dirname, './data/input.txt'), 'utf-8')
 describe('part1', () => {
   it('returns the expected answer with test data', () => {
-    //   const result = part1(testData)
-    //   expect(result).toStrictEqual()
+    // const result = part1(testData)
+    // expect(result).toStrictEqual()
   })
   it('returns the expected answer with real data', () => {
     const result = part1(realData)
