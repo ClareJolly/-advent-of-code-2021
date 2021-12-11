@@ -33,3 +33,4 @@ Collect stars by helping Santa solve puzzles. Two puzzles will be made available
 | [Day 11: Corporate Policy](src/11/summary.md#readme)                      |   ⭐   |   🌟   |
 | [Day 12: JSAbacusFramework.io](src/12/summary.md#readme)                  |   ⭐   |   🌟   |
 | [Day 13: Knights of the Dinner Table](src/13/summary.md#readme)           |   ⭐   |   🌟   |
+| [Day 14: Reindeer Olympics](src/14/summary.md#readme)                     |        |        |
