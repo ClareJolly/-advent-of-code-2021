@@ -5,8 +5,8 @@ const part1 = (inputData: string[], seconds: number = 1) => {
 
   const reindeer = Object.keys(data)
 
+  //   for (let s = 1; s <= 1000; s++) {
   for (let s = 1; s <= seconds; s++) {
-      for (let s = 1; s <= 1000; s++) {
     reindeer.forEach(r => {
       const currentAction = data[r].state === 0 || data[r].state % 2 === 0 ? 'fly' : 'rest'
 
