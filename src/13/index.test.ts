@@ -3,6 +3,6 @@ import run from '.'
 describe('Run all', () => {
   it('returns the expected values', () => {
     const result = run()
-    expect(result).toEqual({ part1: 119433, part2: 68466 })
+    expect(result).toEqual({ part1: 618, part2: 601 })
   })
 })
