@@ -8,15 +8,30 @@ export const getDistanceDetails = (data: ReindeerStats) => {
     })
 }
 
-export const getWinner = (data: ReindeerStats) => {
-  return getDistanceDetails(data)[0][0]
+export const getScoreDetails = (data: ReindeerStats) => {
+  return Object.entries(data)
+    .map(([k, d]) => [k, String(d.score!)])
+    .sort((a, b) => {
+      return Number(b[1]) - Number(a[1])
+    })
+}
+
+export const getWinningScore = (data: ReindeerStats) => {
+  return getScoreDetails(data)[0][1]
+}
+
+export const getWinnersByDistance = (data: ReindeerStats) => {
+  const stats = getDistanceDetails(data)
+  const distance = stats[0][1]
+  const winners = stats.filter(([_, d]) => d === distance).map(w => w[0])
+  return winners
 }
 
 export const getWinningDistance = (data: ReindeerStats) => {
   return getDistanceDetails(data)[0][1]
 }
 
-export const parseInput = (inputData: string[]) => {
+export const parseInput = (inputData: string[], part2: boolean = false) => {
   return inputData.reduce((acc, item) => {
     const line = item.split(' ')
     acc[line[0]] = {
@@ -26,12 +41,18 @@ export const parseInput = (inputData: string[]) => {
       state: 0,
       nextStateChange: Number(line[6]) + 1,
     }
+    if (part2) acc[line[0]].score = 0
 
     return acc
   }, {} as ReindeerStats)
 }
 
-export const processSecond = (reindeer: string[], data: ReindeerStats, s: number) => {
+export const processSecond = (
+  reindeer: string[],
+  data: ReindeerStats,
+  s: number,
+  part2: boolean = false,
+) => {
   reindeer.forEach(r => {
     const currentAction = data[r].state === 0 || data[r].state % 2 === 0 ? 'fly' : 'rest'
 
@@ -45,4 +66,9 @@ export const processSecond = (reindeer: string[], data: ReindeerStats, s: number
       data[r].distance = data[r].distance! + data[r][newAction].speed
     }
   })
+  if (part2) {
+    getWinnersByDistance(data).forEach(r => {
+      data[r].score!++
+    })
+  }
 }

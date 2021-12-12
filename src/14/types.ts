@@ -5,5 +5,6 @@ export interface ReindeerStats {
     distance: number
     state: number
     nextStateChange: number
+    score?: number
   }
 }
