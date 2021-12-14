@@ -1,15 +1,4 @@
-interface Stats {
-  children?: number
-  cats?: number
-  samoyeds?: number
-  pomeranians?: number
-  akitas?: number
-  vizslas?: number
-  goldfish?: number
-  trees?: number
-  cars?: number
-  perfumes?: number
-}
+import { formatData } from '../helpers'
 
 const STATS_TO_CHECK = {
   children: 3,
@@ -25,15 +14,7 @@ const STATS_TO_CHECK = {
 }
 
 const part1 = (inputData: string[]) => {
-  const data = inputData.map(s => {
-    const sueStats = s.replace(/Sue \d+: /g, '').split(', ')
-    const stats: Stats = {}
-    sueStats.forEach(item => {
-      const [key, val] = item.split(': ')
-      stats[key.trim() as keyof Stats] = Number(val)
-    })
-    return stats
-  })
+  const data = formatData(inputData)
 
   const matches: number[] = []
 
