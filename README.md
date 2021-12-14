@@ -19,7 +19,7 @@ Collect stars by helping Santa solve puzzles. Two puzzles will be made available
 ## Progress
 
 | Day                                                                       | Part 1 | Part 2 |
-| :------------------------------------------------------------------------ | :----: | :----: | --- |
+| :------------------------------------------------------------------------ | :----: | :----: |
 | [Day 1: Not Quite Lisp](src/01/summary.md#readme)                         |   ⭐   |   🌟   |
 | [Day 2: I Was Told There Would Be No Math](src/02/summary.md#readme)      |   ⭐   |   🌟   |
 | [Day 3: Perfectly Spherical Houses in a Vacuum](src/03/summary.md#readme) |   ⭐   |   🌟   |
@@ -35,4 +35,4 @@ Collect stars by helping Santa solve puzzles. Two puzzles will be made available
 | [Day 13: Knights of the Dinner Table](src/13/summary.md#readme)           |   ⭐   |   🌟   |
 | [Day 14: Reindeer Olympics](src/14/summary.md#readme)                     |   ⭐   |   🌟   |
 | [Day 15: Science for Hungry People](src/15/summary.md#readme)             |   ⭐   |   🌟   |
-| [Day 16: Aunt Sue](src/16/summary.md#readme)                              |   ⭐   |   🌟   |     |
+| [Day 16: Aunt Sue](src/16/summary.md#readme)                              |   ⭐   |        |

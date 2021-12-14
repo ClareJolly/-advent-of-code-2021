@@ -19,7 +19,8 @@ The My First Crime Scene Analysis Machine (MFCSAM for short) can detect a few sp
 - trees, all in one group.
 - cars, presumably by exhaust or gasoline or something.
 - perfumes, which is handy, since many of your Aunts Sue wear a few kinds.
-  In fact, many of your Aunts Sue have many of these. You put the wrapping from the gift into the MFCSAM. It beeps inquisitively at you a few times and then prints out a message on ticker tape:
+
+In fact, many of your Aunts Sue have many of these. You put the wrapping from the gift into the MFCSAM. It beeps inquisitively at you a few times and then prints out a message on ticker tape:
 
 ```
 children: 3
@@ -44,7 +45,11 @@ What is the number of the Sue that got you the gift?
 
 ## Part 2
 
-<--TEXT-->
+As you're about to send the thank you note, something in the MFCSAM's instructions catches your eye. Apparently, it has an outdated retroencabulator, and so the output from the machine isn't exact values - some of them indicate ranges.
+
+In particular, the cats and trees readings indicates that there are greater than that many (due to the unpredictable nuclear decay of cat dander and tree pollen), while the pomeranians and goldfish readings indicate that there are fewer than that many (due to the modial interaction of magnetoreluctance).
+
+What is the number of the real Aunt Sue?
 
 [Solution Part 2](./part2/index.ts)
 
