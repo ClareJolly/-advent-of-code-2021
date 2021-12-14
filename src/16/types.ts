@@ -10,3 +10,8 @@ export interface Stats {
   cars?: number
   perfumes?: number
 }
+
+export type Keys = keyof Stats
+export interface CheckerConfig {
+  [key: string]: (key: Keys, val: number) => boolean
+}
