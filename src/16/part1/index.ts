@@ -1,4 +1,5 @@
 import { formatData } from '../helpers'
+import { Stats } from '../types'
 
 const STATS_TO_CHECK = {
   children: 3,
