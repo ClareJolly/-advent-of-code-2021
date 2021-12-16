@@ -1,31 +1,14 @@
-export const ADJACENT_CONFIG: number[][] = [
-  [-1, 0],
-  [1, 0],
-  [0, -1],
-  [0, 1],
-  [1, 1],
-  [1, -1],
-  [-1, 1],
-  [-1, -1],
-]
-
-interface Details {
-  on: boolean
-  adjacent: string[]
-}
-interface Summary {
-  [key: string]: Details
-}
+import { ADJACENT_CONFIG } from '../helpers'
+import { Summary } from '../types'
 
 const part2 = (inputData: string[]) => {
   const data = inputData.map(d => d.split(''))
 
-  const height = data.length
-  const width = data[0].length
+  const height = data.length - 1
+  const width = data[0].length - 1
 
   const stuckOn = [`0,0`, `0,${width}`, `${height},0`, `${height},${width}`]
-  //   const steps = 100
-  const steps = 5
+  const steps = 100
 
   const summary: Summary = data.reduce((acc, row, y) => {
     row.forEach((r, x) => {
@@ -40,12 +23,13 @@ const part2 = (inputData: string[]) => {
     return acc
   }, {} as Summary)
 
-  for (let step = 0; step < steps; step++) {
-    const onQueue = []
-    const offQueue = []
+  stuckOn.forEach(s => {
+    summary[s].on = true
+  })
 
-    const onCheck = (coOrd: string) => !summary[coOrd].on
-    const offCheck = (coOrd: string) => summary[coOrd].on
+  for (let step = 0; step < steps; step++) {
+    const onQueue: string[] = []
+    const offQueue: string[] = []
 
     Object.entries(summary).forEach(([key, { on, adjacent }]) => {
       let adjOnCount = 0
