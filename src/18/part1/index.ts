@@ -28,8 +28,9 @@ const part1 = (inputData: string[]) => {
         if (summary[c].on) adjOnCount++
       })
       if (on && (adjOnCount === 2 || adjOnCount === 3)) onQueue.push(key)
-      if (on && adjOnCount !== 2 && adjOnCount !== 3) offQueue.push(key)
       if (!on && adjOnCount === 3) onQueue.push(key)
+
+      if (on && adjOnCount !== 2 && adjOnCount !== 3) offQueue.push(key)
       if (!on && adjOnCount !== 3) offQueue.push(key)
     })
     onQueue.forEach(q => {
